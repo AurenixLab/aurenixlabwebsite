@@ -1,1 +1,1 @@
-console.log('typewriter placeholder');
+console.log('Typewriter + Theme Toggle');
