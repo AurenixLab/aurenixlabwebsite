@@ -1,0 +1,15 @@
+/* Professional Aurenix Gold + Black + Glow and Light Theme */
+/* (Truncated for brevity—add full CSS from prior message) */
+body{margin:0;font-family:'Segoe UI',sans-serif;transition:background .3s,color .3s;}
+:root{--gold:#c6a700;--gold-light:#e7cc44;--dark-bg:#0a0a0a;--dark-panel:#111;--light-bg:#fff;--light-panel:#f5f5f5;}
+body.theme-dark{background:var(--dark-bg);color:#fff;}
+body.theme-light{background:var(--light-bg);color:#000;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 45px;position:sticky;top:0;z-index:50;background:#111;border-bottom:1px solid #c6a70044;}
+.logo{height:55px;}
+.navbar ul{display:flex;list-style:none;gap:30px;}
+.navbar ul li a{text-decoration:none;color:inherit;font-size:16px;}
+.theme-toggle{display:flex;gap:10px;margin-right:40px;}
+.typewriter-hero{text-align:center;padding:150px 20px;background:#000;color:var(--gold);}
+.content{max-width:1100px;margin:40px auto;padding:20px;}
+.tebex-frame{width:100%;height:1800px;border:none;}
+footer{text-align:center;padding:20px;margin-top:50px;background:#111;border-top:1px solid #c6a70055;color:#fff;}
