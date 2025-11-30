@@ -1,15 +1,216 @@
-/* Professional Aurenix Gold + Black + Glow and Light Theme */
-/* (Truncated for brevity—add full CSS from prior message) */
-body{margin:0;font-family:'Segoe UI',sans-serif;transition:background .3s,color .3s;}
-:root{--gold:#c6a700;--gold-light:#e7cc44;--dark-bg:#0a0a0a;--dark-panel:#111;--light-bg:#fff;--light-panel:#f5f5f5;}
-body.theme-dark{background:var(--dark-bg);color:#fff;}
-body.theme-light{background:var(--light-bg);color:#000;}
-.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 45px;position:sticky;top:0;z-index:50;background:#111;border-bottom:1px solid #c6a70044;}
-.logo{height:55px;}
-.navbar ul{display:flex;list-style:none;gap:30px;}
-.navbar ul li a{text-decoration:none;color:inherit;font-size:16px;}
-.theme-toggle{display:flex;gap:10px;margin-right:40px;}
-.typewriter-hero{text-align:center;padding:150px 20px;background:#000;color:var(--gold);}
-.content{max-width:1100px;margin:40px auto;padding:20px;}
-.tebex-frame{width:100%;height:1800px;border:none;}
-footer{text-align:center;padding:20px;margin-top:50px;background:#111;border-top:1px solid #c6a70055;color:#fff;}
+/* -------------------------------------------------- */
+/*                  GLOBAL RESET                      */
+/* -------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Segoe UI", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* -------------------------------------------------- */
+/*                  THEME COLORS                      */
+/* -------------------------------------------------- */
+:root {
+    --gold: #c6a700;
+    --gold-light: #e3c959;
+    --dark-bg: #0a0a0a;
+    --dark-panel: #111;
+    --light-bg: #ffffff;
+    --light-panel: #f4f4f4;
+    --gray-text: #444;
+}
+
+
+/* -------------------------------------------------- */
+/*                    DARK THEME                      */
+/* -------------------------------------------------- */
+body.theme-dark {
+    background: var(--dark-bg);
+    color: #fff;
+}
+
+body.theme-dark .navbar {
+    background: rgba(15, 15, 15, 0.92);
+    border-bottom: 1px solid #c6a70055;
+}
+
+body.theme-dark .panel {
+    background: rgba(17, 17, 17, 0.85);
+    border: 1px solid #c6a70055;
+    backdrop-filter: blur(6px);
+}
+
+body.theme-dark .footer {
+    background: #111;
+    border-top: 1px solid #c6a70055;
+}
+
+
+/* -------------------------------------------------- */
+/*                    LIGHT THEME                     */
+/* -------------------------------------------------- */
+body.theme-light {
+    background: var(--light-bg);
+    color: #000;
+}
+
+body.theme-light .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #dcdcdc;
+}
+
+body.theme-light .panel {
+    background: var(--light-panel);
+    border: 1px solid #dcdcdc;
+}
+
+body.theme-light .footer {
+    background: #ececec;
+    border-top: 1px solid #ccc;
+}
+
+
+/* -------------------------------------------------- */
+/*                     NAVBAR                         */
+/* -------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 45px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    height: 55px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 12px;
+    transition: 0.2s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: var(--gold);
+}
+
+
+/* -------------------------------------------------- */
+/*                 THEME TOGGLE BUTTON                */
+/* -------------------------------------------------- */
+.theme-toggle {
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+}
+
+.theme-toggle button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.theme-toggle button:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+
+/* -------------------------------------------------- */
+/*                    HERO SECTION                    */
+/* -------------------------------------------------- */
+.typewriter-hero {
+    padding: 150px 20px 140px;
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1527443224154-9e7aa59a5cde?auto=format&fit=crop&w=1500&q=80") center/cover no-repeat;
+    position: relative;
+}
+
+.typewriter-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.typewriter-hero h1,
+.typewriter-hero h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.typewriter-hero h1 {
+    font-size: 70px;
+    color: var(--gold);
+    text-shadow: 0 0 20px var(--gold);
+}
+
+.typewriter-hero h2 {
+    margin-top: 10px;
+    font-size: 26px;
+    height: 40px;
+}
+
+
+/* -------------------------------------------------- */
+/*                    CONTENT PANELS                  */
+/* -------------------------------------------------- */
+.content {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.panel {
+    padding: 35px;
+    border-radius: 14px;
+    margin-bottom: 45px;
+}
+
+
+/* -------------------------------------------------- */
+/*                        IFRAME                      */
+/* -------------------------------------------------- */
+.tebex-frame {
+    width: 100%;
+    height: 2200px;
+    border: none;
+}
+
+
+/* -------------------------------------------------- */
+/*                       FOOTER                       */
+/* -------------------------------------------------- */
+.footer {
+    padding: 30px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer a {
+    color: var(--gold);
+    margin: 0 12px;
+    text-decoration: none;
+}
